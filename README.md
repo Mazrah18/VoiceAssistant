@@ -10,7 +10,5 @@ E. requests\
 F. pyttsx3\
 G. selenium\
 H. winsound\
-
 Run the code by typing:\
-
 python Assistant.py
