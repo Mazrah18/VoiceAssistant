@@ -58,7 +58,7 @@ def assistant(command):
         reg_ex = re.search('open folder (.*)',command)
         if reg_ex:
             folder = reg_ex.group(1)
-            webbrowser.open("C:\\Users\\Sanika Sanaye\\Desktop\\"+folder)
+            webbrowser.open("C:\\Users\\Parth\\Desktop\\"+folder)
             talkToMe('What should I do next?')
             key2 = myCommand()
 
@@ -67,14 +67,14 @@ def assistant(command):
                 reg_ex = re.search('create (.*)', key2)
                 if reg_ex:
                     subfolder = reg_ex.group(1)
-                    os.mkdir("C:\\Users\\Sanika Sanaye\\Desktop\\"+folder+"\\"+subfolder)
+                    os.mkdir("C:\\Users\\Parth\\Desktop\\"+folder+"\\"+subfolder)
 
             #To remove folder from current folder
             elif 'remove' in key2:
                 reg_ex = re.search('remove (.*)', key2)
                 if reg_ex:
                     subfolder = reg_ex.group(1)
-                    os.rmdir("C:\\Users\\Sanika Sanaye\\Desktop\\"+folder+"\\"+subfolder)
+                    os.rmdir("C:\\Users\\Parth\\Desktop\\"+folder+"\\"+subfolder)
                     
             talkToMe('Done')
         
@@ -123,7 +123,7 @@ def assistant(command):
 
     #To play music
     elif 'play music' in command:
-        p = vlc.MediaPlayer("C:\\Users\\Sanika Sanaye\\Downloads\\MAMAMOO_-_Sleep_In_The_Car_(mp3.pm).mp3")
+        p = vlc.MediaPlayer("C:\\Users\\Parth\\Downloads\\MAMAMOO_-_Sleep_In_The_Car_(mp3.pm).mp3")
         p.play()
         print("press 1 to close music")
         key1 = input()
@@ -133,7 +133,7 @@ def assistant(command):
     
     #To exit the program
     elif 'exit' in command:
-        talkToMe('Thanks Sanika. See you next time')
+        talkToMe('Thanks. See you next time')
         sys.exit(ExitStatus.success)
         
     #when a command doesn't match any given commands
